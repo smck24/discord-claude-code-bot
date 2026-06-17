@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+
+# The workspace folder is where the *user's own project* lives — don't
+# vendor it into this bot's repo. Keep the scaffolding files only.
+workspace/*
+!workspace/.claude
+!workspace/.claude/*
+!workspace/README.md

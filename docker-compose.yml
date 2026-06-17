@@ -1,0 +1,11 @@
+services:
+  claude-bot:
+    build: .
+    env_file: .env
+    volumes:
+      - ./workspace:/workspace
+    restart: unless-stopped
+    # Loose resource limits — cheap insurance against a runaway process.
+    # Adjust to taste; remove if your Compose version doesn't support them.
+    mem_limit: "2g"
+    cpus: "2"
